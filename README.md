@@ -2,15 +2,19 @@
 
 # PhraseBot
 
-
+Phrase Bot is a discord bot that saves a phrase and a corresponding response. In the future if Phrase bot sees you using this phrase it responds with the pre-programmed response
 
 ## Usage
 
-
+Something something Node
+Something npm
+bla bla bla
 
 ## Developing
 
-
+Something something Node
+Something npm
+bla bla bla
 
 ### Tools
 

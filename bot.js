@@ -8,12 +8,17 @@ const catchPhraseFile="memory.json";
 //Sync will be issue with multi servers probably just do DB >_>
 saveRegex=/^save *["'](.*)["'] *["'](.*)["']$/
 
-removeRegex=/^remove \'(.*)\'$/
+//TODO: add a function to escape regex
 
+//Not in use but could be useful when 
+//removeRegex=/^remove \'(.*)\'$/
+
+//Reads Json in catchPhrases file to memory
 function readFile(){
 	return JSON.parse(fs.readFileSync(catchPhraseFile,'utf8'))
 }
 
+//Writes catchPhrase data object to catchPhraseFile listed above
 function saveFile(){
 	fs.writeFile(catchPhraseFile, JSON.stringify(catchPhrases), function(err) {
 	    if (err) {
@@ -30,6 +35,7 @@ function getResponse(user){
 	return catchPhrases[user]['response']
 }
 
+//Sets catchphrase and saves new catch phrase to memory
 function setCatchPhraseAndResponse(user,catchPhrase,response){
 	console.log(`Setting catchPhrase/response for ${user} to ${catchPhrase} / ${response}`)
 	catchResponse={}
@@ -37,13 +43,17 @@ function setCatchPhraseAndResponse(user,catchPhrase,response){
 	catchResponse['response']=response
 	catchPhrases[user]=catchResponse
 	saveFile()
+
 }
 
+//Removes the user from file as currently user to catchphrase/response is 1:1
 function removeCatchPhrase(user){
 	console.log(`removing ${user}`)
 	delete catchPhrases[user];
 	saveFile()
 }
+
+//Function to be called on exit to save the current catchPhrases to memory 
 function exitHandler() {
 	console.log("Saved File on Close")
     saveFile()
@@ -80,11 +90,14 @@ client.on('message', msg => {
 	}
 });
 
+
+//This one worked I found out on accident
 client.on('error',exitHandler.bind())
-
+//Not sure that either of the following lines do anything
 client.on('SIGINT',exitHandler.bind())
-
 client.on('uncaughtException',exitHandler.bind())
+
+
 client.login(auth.token);
 
 
