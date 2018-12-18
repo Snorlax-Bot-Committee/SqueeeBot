@@ -6,3 +6,4 @@ package-lock.json
 .settings/**
 .sublime-project
 .tern-project
+memory.json
