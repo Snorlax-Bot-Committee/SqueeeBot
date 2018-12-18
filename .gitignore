@@ -1,0 +1,8 @@
+auth.json
+node_modules/**
+package-lock.json
+.jshintrc
+.project
+.settings/**
+.sublime-project
+.tern-project
