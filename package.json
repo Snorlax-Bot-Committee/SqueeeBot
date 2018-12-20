@@ -1,9 +1,9 @@
 {
-  "name": "PhraseBot",
+  "name": "squeebot",
   "version": "0.1.0",
-  "description": "A bot that helps you...",
-  "main": "bot.js",
-  "author": "crice8",
+  "description": "squeeeeeeee",
+  "main": "squeee.js",
+  "author": "jennpeare",
   "dependencies": {
     "discord.js": "^11.4.2"
   }

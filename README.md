@@ -1,31 +1,24 @@
-# PhraseBot
+# Squeee
 
-Phrase Bot is a discord bot that saves a phrase and a corresponding response. In the future if Phrase bot sees you using this phrase it responds with the pre-programmed response
+brb fangirling
 
 ## Usage
 
-0. Read [this article]('https://www.devdungeon.com/content/javascript-discord-bot-tutorial').
+0. Read [this tutorial]('https://www.devdungeon.com/content/javascript-discord-bot-tutorial').
 1. `git clone` this repository to your local.
 2. Run `npm install`.
-3. Create a file in the root directory called `auth.json` and paste your bot token in there.
+3. Create a file in the root directory called `auth.json` and paste your bot token in there. Do **not** commit `auth.json` or share your bot token.
 	
     ```
     {
-      "token": "YOUR_BOT_TOKEN_HERE"
+      "token": YOUR_BOT_TOKEN,
+      "generalChannelId": YOUR_CHANNEL_ID
     }
     ```
-  Do **not** commit `auth.json` or share your bot token.
 
-4. Run `node bot.js`. If it doesn't work, ask Chris what other files you need.
+4. Run `node squeee.js`.
 
 ## Developing
 
-Once again, read [this article]('https://www.devdungeon.com/content/javascript-discord-bot-tutorial').
-
-### Tools
-
-Created with [Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1)
- ([Eclipse Marketplace](http://marketplace.eclipse.org/content/nodeclipse), [site](http://www.nodeclipse.org))   
-
-Nodeclipse is free open-source project that grows with your contributions.
-# PhraseBot
+- [Tutorial]('https://www.devdungeon.com/content/javascript-discord-bot-tutorial')
+- [discord.js Documentation](https://discord.js.org/#/docs/main/stable/general/welcome)
