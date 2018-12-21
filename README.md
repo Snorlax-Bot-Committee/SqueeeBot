@@ -11,8 +11,7 @@ brb fangirling
 	
     ```
     {
-      "token": YOUR_BOT_TOKEN,
-      "generalChannelId": YOUR_CHANNEL_ID
+      "token": "YOUR_BOT_TOKEN"
     }
     ```
 

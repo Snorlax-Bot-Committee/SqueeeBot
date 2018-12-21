@@ -2,11 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const auth = require('./auth.json');
 
-let generalChannel;
-
 client.on('ready', () => {
   console.log('Connected as ' + client.user.tag);
-  generalChannel = client.channels.get(auth.generalChannelId);
 });
 
 client.on('message', (msg) => {
@@ -28,15 +25,15 @@ function processCommand(msg) {
   console.log('args', args);
 
   if (cmd === 'lah') {
-    sendImage(args);
+    sendImage(args, msg.channel);
   } else if (cmd == 'help') {
-    sendText('`!lah [rude|hehe|sadface|busy]`');
+    sendText('`!lah [rude|hehe|sadface|busy]`', msg.channel);
   } else {
-    sendText('??????????');
+    sendText('??????????', msg.channel);
   }
 }
 
-function sendImage(args) {
+function sendImage(args, channel) {
   if (args && args[0]) {
     let url;
 
@@ -56,12 +53,12 @@ function sendImage(args) {
       default:
         return;
     }
-    generalChannel.send(new Discord.Attachment(url));
+    channel.send(new Discord.Attachment(url));
   }
 }
 
-function sendText(text) {
-  generalChannel.send(text);
+function sendText(text, channel) {
+  channel.send(text);
 }
 
 client.login(auth.token);
