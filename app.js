@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const config = require('./config.json');
 const Commander = require('./services/commander.js');
+const Messenger = require('./services/messenger.js');
 
 const bot = new Discord.Client();
 const commander = new Commander();
@@ -13,6 +14,8 @@ bot.on('ready', () => {
 });
 
 bot.on('message', message => {
+  const messenger = new Messenger(bot, message);
+
   // ignore messages from bots
   if (message.author.bot) return;
 
@@ -28,7 +31,10 @@ bot.on('message', message => {
   const cmd = commander.get(commandText);
 
   // cmd does not exist
-  if (!cmd) return;
+  if (!cmd) {
+    messenger.sendText('???????????????????');
+    return;
+  };
 
   // make sure run() is exported in [cmd].js
   cmd.run(bot, message, args);

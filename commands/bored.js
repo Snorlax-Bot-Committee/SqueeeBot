@@ -4,11 +4,9 @@ const request = require('request-promise');
 const Wiki = require('wikijs').default;
 
 const wikipediaRandomUrl = 'https://en.wikipedia.org/api/rest_v1/page/random/summary';
-const boredThumb = 'https://gph.to/2BICJLV';
+const boredThumb = 'https://gph.to/2BMtrhV';
 
 const run = (bot, message, args) => {
-  console.log('message', message.content);
-  console.log('args', args);
   const messenger = new Messenger(bot, message);
 
   if (args.length == 0) {

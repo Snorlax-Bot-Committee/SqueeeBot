@@ -5,7 +5,7 @@ const run = (bot, message, args) => {
   console.log('args', args);
   
   const messenger = new Messenger(bot, message);
-  const menu = '```!lah rude|hehe|sadface|busy\n!bored (keyword)```';
+  const menu = '```!lah rude|hehe|sadface|busy\n!bored (keyword)\n!esl term```';
   messenger.sendText(menu);
 };
 
