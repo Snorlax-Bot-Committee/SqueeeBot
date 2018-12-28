@@ -38,7 +38,7 @@ const random = () => {
 };
 
 const search = (keywords) => {
-  let info = {}
+  let info = {};
 
   return Wiki().search(keywords, 1)
     .then(data => {
@@ -61,6 +61,9 @@ const search = (keywords) => {
         .setDescription(info.summary)
         .setURL(info.url)
         .setImage(info.img);
+    })
+    .catch(err => {
+      console.error(err);
     });
 };
 

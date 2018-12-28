@@ -5,7 +5,8 @@ const run = (bot, message, args) => {
   console.log('args', args);
   
   const messenger = new Messenger(bot, message);
-  messenger.sendText('`!lah [rude|hehe|sadface|busy]`');
+  const menu = '```!lah rude|hehe|sadface|busy\n!bored (keyword)```';
+  messenger.sendText(menu);
 };
 
 module.exports.run = run;
