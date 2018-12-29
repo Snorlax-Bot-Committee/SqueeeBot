@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
-const Messenger = require('../services/messenger.js');
 const request = require('request-promise');
-const baseUrl = 'https://mydictionaryapi.appspot.com/';
+const Messenger = require.main.require('./services/messenger.js');
 
+const baseUrl = 'https://mydictionaryapi.appspot.com/';
 const dictThumb = 'https://gph.to/2VeFbmh';
 
 const run = (bot, message, args) => {

@@ -1,4 +1,4 @@
-const Messenger = require('../services/messenger.js');
+const Messenger = require.main.require('./services/messenger.js');
 
 const run = (bot, message, args) => {
   console.log('message', message.content);

@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
-const Messenger = require('../services/messenger.js');
 const request = require('request-promise');
 const Wiki = require('wikijs').default;
+const Messenger = require.main.require('./services/messenger.js');
 
 const wikipediaRandomUrl = 'https://en.wikipedia.org/api/rest_v1/page/random/summary';
 const boredThumb = 'https://gph.to/2BMtrhV';
