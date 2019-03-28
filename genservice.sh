@@ -3,7 +3,7 @@
 # genservice.sh user=<username> [bot_path=<path to bot file>|bot_file=<bot file name>|node=<path to node>]
 my_name=`basename $0`
 which_node=`which node`
-bot_file="squeee.js"
+bot_file="app.js"
 path_to_bot=$PWD
 
 for arg in $@; do
