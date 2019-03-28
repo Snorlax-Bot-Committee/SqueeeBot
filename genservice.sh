@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 # Run this to generate a service file for systemctl
 # genservice.sh user=<username> [bot_path=<path to bot file>|bot_file=<bot file name>|node=<path to node>]
 my_name=`basename $0`
