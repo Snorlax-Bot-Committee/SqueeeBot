@@ -1,19 +1,19 @@
-const Discord = require('discord.js')
-const config = require('./config.json');
-const Commander = require('./services/commander.js');
-const Messenger = require('./services/messenger.js');
+const Discord = require("discord.js")
+const config = require("./config.json");
+const Commander = require("./services/commander.js");
+const Messenger = require("./services/messenger.js");
 
 const bot = new Discord.Client();
 const commander = new Commander();
 
-bot.on('ready', () => {
-  console.log('Connected as ' + bot.user.tag);
+bot.on("ready", () => {
+  console.log("Connected as " + bot.user.tag);
 
   // register all commands in the commands dir
   commander.register();
 });
 
-bot.on('message', message => {
+bot.on("message", message => {
   const messenger = new Messenger(bot, message);
 
   // ignore messages from bots
@@ -32,7 +32,7 @@ bot.on('message', message => {
 
   // cmd does not exist
   if (!cmd) {
-    messenger.sendText('???????????????????');
+    messenger.sendText("???????????????????");
     return;
   };
 
