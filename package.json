@@ -2,7 +2,7 @@
   "name": "squeebot",
   "version": "0.1.0",
   "description": "squeeeeeeee",
-  "main": "squeee.js",
+  "main": "app.js",
   "author": "jennpeare",
   "dependencies": {
     "discord.js": "^11.4.2",
